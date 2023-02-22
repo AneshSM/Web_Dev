@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <title>Dashbord</title>
+</head>
+
+<body>
+    <section>
+        <div id="logo">
+            <p>Penta</p>
+        </div>
+        <nav>
+            <ul>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Dashboard</p>
+                </li>
+                <li class="opt">
+                    <span class="opticn">Transactions</span>
+                    <p class="optnm"></p>
+                </li>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Wallet</p>
+                </li>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Analytics</p>
+                </li>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Personal</p>
+                </li>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Message</p>
+                </li>
+                <li class="opt">
+                    <span class="opticn"></span>
+                    <p class="optnm">Setting</p>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <header>
+        <div class="ttl">Dashboard</div>
+
+        <nav id="hdr">
+            <span id="srchbr">
+                <input type="text" id="srch">
+                <span id="srchicn"></span>
+            </span>
+            <span id="notifi"></span>
+            <span class="prfl">
+                <img src="src/img/prfl.jpg" alt="no img">
+            </span>
+        </nav>
+    </header>
+    <main>
+        <div class="ctnrs" id="ctnrs1">
+            <div class="cards">
+                <span class="crdicn"></span>
+                <span class="crdttl">Balance</span>
+                <span class="crdprc">$41,210</span>
+            </div>
+            <div class="cards" >
+                <span class="crdicn"></span>
+                <span class="crdttl">Income</span>
+                <span class="crdprc">$41,210</span>
+            </div>
+            <div class="cards">
+                <span class="crdicn"></span>
+                <span class="crdttl">Expenses</span>
+                <span class="crdprc">$41,210</span>
+            </div>
+            <div class="cards">
+                <span class="crdicn"></span>
+                <span class="crdttl">Savings</span>
+                <span class="crdprc">$41,210</span>
+            </div>
+        </div>
+        <div class="ctnrs" id="ctnrs2">
+            <div id="ovrviw" class="status">
+                <span class="ststtl">Overview</span>
+                <span class="stsnav">
+                    <span class="clricn"></span>
+                    <span class="clrnm">Income</span>
+                    <span class="clricn"></span>
+                    <span class="clrnm">Expenses</span>
+                </span>
+                <span class="stsimg">
+                    <img src="src/img/ovrviw.png" alt="no image">
+                </span>
+            </div>
+            <div id="actvt" class="status">
+                <span class="ststtl"></span>
+                <span class="stsnav">
+                    <span class="clricn"></span>
+                    <span class="clrnm">Earning</span>
+                    <span class="clricn"></span>
+                    <span class="clrnm">Spent</span>
+                </span>
+                <span class="stsimg">
+                    <img src="src/img/actvt.png" alt="no image">
+                </span>
+            </div>
+            <div id="prgrs" class="status">
+                <span class="ststtl">Payment</span>
+                <ul id="ctnr">
+                    <li>
+                        <span class="prgrsicn"></span>
+                        <label for="acc">Account</label>
+                        <label for="acc">$3,241/$10,000</label>
+                        <progress id="acc" value="40" max="100"></progress>
+                    </li>
+                    <li>
+                        <span class="prgrsicn"></span>
+                        <label for="sft">Software</label>
+                        <label for="sft">$241/$250</label>
+                        <progress id="sft" value="90" max="100"></progress>
+                    </li>
+                    <li>
+                        <span class="prgrsicn"></span>
+                        <label for="rh">Rent Houserh</label>
+                        <label for="rh">$1,541/$52,000</label>
+                        <progress id="rh" value="20" max="100"></progress>
+                    </li>
+                    <li>
+                        <span class="prgrsicn"></span>
+                        <label for="fd">Food</label>
+                        <label for="fd">$141/$1,000</label>
+                        <progress id="fd" value="30" max="100"></progress>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ctnrs" id="ctnrs3">
+            <div class="blk">
+                <label for="cdtcrd">Credit Card</label>
+                <span class="blkicn"></span>
+                <div id="cdtcrd">
+                    <span>
+                        <div>LOGO</div>
+                        <p name="accno">3475 7381 3759 ****</p>
+                    </span>
+                    <span>
+                        <label for="blnc">TOTAL BLANCAE</label>
+                        <p name="blnc">3,215,352 USD</p>
+                        <label for="date">EXP. DATE</label>
+                        <p name="date">04 / 24</p>
+                    </span>
+                </div>
+            </div>
+            <div class="blk">
+                <label for="trns">Recent Transaction</label>
+                <span class="blkicn">See all</span>
+                <div id="trns">
+                    <ul>
+                        <li>
+                            <span class="prfl">
+                                <img src="src/img/prfl.jpg" alt="">
+                            </span>
+                            <span>
+                                <label for="nm">Tranfers from</label>
+                                <p name="nm">Matheus Ferrero</p>
+                            </span>
+                            <span>
+                                <p>+$54.08</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="prfl">
+                                <img src="src/img/prfl.jpg" alt="">
+                            </span>
+                            <span>
+                                <label for="nm">Tranfers to</label>
+                                <p name="nm">Floyd Miles</p>
+                            </span>
+                            <span>
+                                <p>-$39.65</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="prfl">
+                                <img src="src/img/prfl.jpg" alt="">
+                            </span>
+                            <span>
+                                <label for="nm">Tranfers to</label>
+                                <p name="nm">Jerome Bell</p>
+                            </span>
+                            <span>
+                                <p>-$29.78</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="prfl">
+                                <img src="src/img/prfl.jpg" alt="">
+                            </span>
+                            <span>
+                                <label for="nm">Tranfers to</label>
+                                <p name="nm">Ralph Edwards</p>
+                            </span>
+                            <span>
+                                <p>-$46.61</p>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
