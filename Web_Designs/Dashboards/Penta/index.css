@@ -221,7 +221,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px;
     align-items: center;
     justify-content: space-evenly;
 }
