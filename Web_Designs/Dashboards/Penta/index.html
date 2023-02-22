@@ -19,6 +19,7 @@
 
 <body>
     <section>
+
         <div id="logo">
             <img src="src/img/logo.png" alt="no img">
             <p>Penta</p>
@@ -136,28 +137,48 @@
                     <span class="ststtl">Payment</span>
                     <ul id="ctnr">
                         <li>
-                            <img src="src/img/Account.png" class="prgrsicn"></img>
-                            <label for="acc">Account</label>
-                            <label for="acc">$3,241/$10,000</label>
-                            <progress id="acc" value="40" max="100"></progress>
+                            <span class="payicn">
+                                <img src="src/img/Account.png" class="prgrsicn"></img>
+                            </span>
+                            <span class="paystts">
+                                <span>
+                                    <label for="acc">Account</label><label for="acc">$3,241/<p>$10,000</p></label>
+                                </span>
+                                <progress id="acc" value="40" max="100"></progress>
+                            </span>
                         </li>
                         <li>
-                            <img src="src/img/Software.png" class="prgrsicn"></img>
-                            <label for="sft">Software</label>
-                            <label for="sft">$241/$250</label>
-                            <progress id="sft" value="90" max="100"></progress>
+                            <span class="payicn">
+                                <img src="src/img/Software.png" class="prgrsicn"></img>
+                            </span>
+                            <span class="paystts">
+                                <span>
+                                    <label for="sft">Software</label><label for="sft">$241/<p>$250</p></label>
+                                </span>
+                                <progress id="sft" value="90" max="100"></progress>
+                            </span>
                         </li>
                         <li>
-                            <img src="src/img/Rent House.png" class="prgrsicn"></img>
-                            <label for="rh">Rent Houserh</label>
-                            <label for="rh">$1,541/$52,000</label>
-                            <progress id="rh" value="20" max="100"></progress>
+                            <span class="payicn">
+                                <img src="src/img/Rent House.png" class="prgrsicn"></img>
+                            </span>
+                            <span class="paystts">
+                                <span>
+                                    <label for="rh">Rent Houserh</label><label for="rh">$1,541/<p>$52,000</p></label>
+                                </span>
+                                <progress id="rh" value="20" max="100"></progress>
+                            </span>
                         </li>
                         <li>
-                            <img src="src/img/Food.png" class="prgrsicn"></img>
-                            <label for="fd">Food</label>
-                            <label for="fd">$141/$1,000</label>
-                            <progress id="fd" value="30" max="100"></progress>
+                            <span class="payicn">
+                                <img src="src/img/Food.png" class="prgrsicn"></img>
+                            </span>
+                            <span class="paystts">
+                                <span>
+                                    <label for="fd">Food</label><label for="fd">$141/<p>$1,000</p></label>
+                                </span>
+                                <progress id="fd" value="30" max="100"></progress>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -165,14 +186,16 @@
         </div>
         <div class="ctnrs" id="ctnrs3">
             <div class="blk">
-                <label for="cdtcrd">Credit Card</label>
-                <span class="blkicn"></span>
+                <span>
+                    <label for="cdtcrd">Credit Card</label>
+                    <span class="blkicn">+</span>
+                </span>
                 <div id="cdtcrd">
                     <span>
                         <div>LOGO</div>
                         <p name="accno">3475 7381 3759 ****</p>
                     </span>
-                    <span>
+                    <div>
                         <label for="blnc">TOTAL BLANCAE</label>
                         <p name="blnc">3,215,352 USD</p>
                         <label for="date">EXP. DATE</label>
@@ -181,8 +204,10 @@
                 </div>
             </div>
             <div class="blk">
-                <label for="trns">Recent Transaction</label>
-                <span class="blkicn">See all</span>
+                <span>
+                    <label for="trns">Recent Transaction</label>
+                    <span class="blkicn">See all</span>
+                </span>
                 <div id="trns">
                     <ul>
                         <li>

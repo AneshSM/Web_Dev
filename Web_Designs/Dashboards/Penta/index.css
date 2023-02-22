@@ -24,7 +24,7 @@ body {
 .blk {
     background-color: #1A1C22;
     /* border: 1px solid white; */
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* -----------------------------------Header---------------------------------- */
@@ -225,14 +225,6 @@ main {
     justify-content: space-evenly;
 }
 
-.status {
-    display: flex;
-    flex-grow: 1;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-}
-
 .ststtl {
     font-size: 15px;
 }
@@ -250,15 +242,19 @@ main {
 }
 
 #ovrviw,
-#actvt {
+#actvt,
+#prgrs {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
 }
 
 #ovrviw>nav,
-#actvt>nav {
+#actvt>nav{
     width: 100%;
     display: inherit;
     align-items: baseline;
@@ -282,8 +278,94 @@ main {
     object-fit: contain;
 }
 
+#prgrs>.ststtl{
+    width: 100%;
+
+}
+
+#ctnr{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    gap: 15px;
+    /* border: 1px solid white; */
+}
+
+#ctnr>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.payicn{
+        background-color: #282C35;
+        padding: 5px;
+        width: fit-content;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.payicn>img{
+    height: 25px;
+}
+.paystts{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+.paystts>span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paystts>span>label{
+    font-size: 10px;
+}
+.paystts>span>label>p{
+    color: #A9A9A9;
+    font-size: 10px;
+    display: inline;
+}
+.paystts>progress{
+    width: 28vh ;
+    background-color: #20ef5b;
+    height: 8px;
+}
 /* --------------------------------- */
 
 #ctnrs3 {
     grid-column: 2/3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.blk{
+    display: inherit;
+    flex-direction: column;
+}
+.blk>span{
+    display: inherit;
+}
+#cdtcrd{
+    display: inherit;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+#cdtcrd>span{
+display: flex;    
+flex-direction: column;
+background-color: #282C35;
+padding: 10px;
+}
+#cdtcrd>div{
+    background-color: #3D4149;
 }
