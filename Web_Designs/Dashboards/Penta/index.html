@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="index.css">
 
     <title>Dashbord</title>
@@ -14,36 +20,37 @@
 <body>
     <section>
         <div id="logo">
+            <img src="src/img/logo.png" alt="no img">
             <p>Penta</p>
         </div>
         <nav>
             <ul>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Dashboard.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Dashboard</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn">Transactions</span>
-                    <p class="optnm"></p>
+                    <img src="src/img/Transactions.png" class="opticn"></img src="src/img/">
+                    <p class="optnm">Transactions</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Wallet.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Wallet</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Analytics.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Analytics</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Personal.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Personal</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Message.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Message</p>
                 </li>
                 <li class="opt">
-                    <span class="opticn"></span>
+                    <img src="src/img/Setting.png" class="opticn"></img src="src/img/">
                     <p class="optnm">Setting</p>
                 </li>
             </ul>
@@ -54,91 +61,106 @@
 
         <nav id="hdr">
             <span id="srchbr">
-                <input type="text" id="srch">
-                <span id="srchicn"></span>
+                <input type="text" placeholder="Search..." id="srch">
+                <img class="bi" src="src/img/search-normal.png"></img>
             </span>
-            <span id="notifi"></span>
+            <img id="notify" class="bi" src="src/img/NotificationWithDot.png"></img>
             <span class="prfl">
-                <img src="src/img/prfl.jpg" alt="no img">
+                <img src="src/img/Photo-4.png" alt="no img">
             </span>
         </nav>
     </header>
     <main>
         <div class="ctnrs" id="ctnrs1">
             <div class="cards">
-                <span class="crdicn"></span>
-                <span class="crdttl">Balance</span>
-                <span class="crdprc">$41,210</span>
-            </div>
-            <div class="cards" >
-                <span class="crdicn"></span>
-                <span class="crdttl">Income</span>
-                <span class="crdprc">$41,210</span>
+                <span class="crdicn"><img src="src/img/Balance.png"></img></span>
+                <div class="crdnm">
+                    <label for="prc1" class="crdttl">Balance</label>
+                    <span id="prc1" class="crdprc">$41,210</span>
+                </div>
             </div>
             <div class="cards">
-                <span class="crdicn"></span>
-                <span class="crdttl">Expenses</span>
-                <span class="crdprc">$41,210</span>
+                <span class="crdicn"><img src="src/img/Income.png"></img></span>
+                <div class="crdnm">
+                    <label for="prc2" class="crdttl">Income</label>
+                    <span id="prc2" class="crdprc">$41,210</span>
+                </div>
             </div>
             <div class="cards">
-                <span class="crdicn"></span>
-                <span class="crdttl">Savings</span>
-                <span class="crdprc">$41,210</span>
+                <span class="crdicn"><img src="src/img/Expenses.png"></img></span>
+                <div class="crdnm">
+                    <label for="prc3" class="crdttl">Expenses</label>
+                    <span id="prc3" class="crdprc">$41,210</span>
+                </div>
             </div>
+            <div class="cards">
+                <span class="crdicn"><img src="src/img/Savings.png"></img></span>
+                <div class="crdnm">
+                    <label for="prc4" class="crdttl">Savings</label>
+                    <span id="prc4" class="crdprc">$41,210</span>
+                </div>
+            </div>
+
         </div>
         <div class="ctnrs" id="ctnrs2">
-            <div id="ovrviw" class="status">
-                <span class="ststtl">Overview</span>
-                <span class="stsnav">
-                    <span class="clricn"></span>
-                    <span class="clrnm">Income</span>
-                    <span class="clricn"></span>
-                    <span class="clrnm">Expenses</span>
-                </span>
+            <div id="ovrviw" class="card2 status">
+                <nav>
+                    <span class="ststtl">Overview</span>
+                    <span class="stsnav">
+                        <div class="clricn"></div>
+                        <span class="clrnm">Income</span>
+                        <div class="clricn"></div>
+                        <span class="clrnm">Expenses</span>
+                    </span>
+                </nav>
                 <span class="stsimg">
-                    <img src="src/img/ovrviw.png" alt="no image">
+                    <img src="src/img/Overview.png" alt="no image">
                 </span>
             </div>
-            <div id="actvt" class="status">
-                <span class="ststtl"></span>
-                <span class="stsnav">
-                    <span class="clricn"></span>
-                    <span class="clrnm">Earning</span>
-                    <span class="clricn"></span>
-                    <span class="clrnm">Spent</span>
-                </span>
-                <span class="stsimg">
-                    <img src="src/img/actvt.png" alt="no image">
-                </span>
-            </div>
-            <div id="prgrs" class="status">
-                <span class="ststtl">Payment</span>
-                <ul id="ctnr">
-                    <li>
-                        <span class="prgrsicn"></span>
-                        <label for="acc">Account</label>
-                        <label for="acc">$3,241/$10,000</label>
-                        <progress id="acc" value="40" max="100"></progress>
-                    </li>
-                    <li>
-                        <span class="prgrsicn"></span>
-                        <label for="sft">Software</label>
-                        <label for="sft">$241/$250</label>
-                        <progress id="sft" value="90" max="100"></progress>
-                    </li>
-                    <li>
-                        <span class="prgrsicn"></span>
-                        <label for="rh">Rent Houserh</label>
-                        <label for="rh">$1,541/$52,000</label>
-                        <progress id="rh" value="20" max="100"></progress>
-                    </li>
-                    <li>
-                        <span class="prgrsicn"></span>
-                        <label for="fd">Food</label>
-                        <label for="fd">$141/$1,000</label>
-                        <progress id="fd" value="30" max="100"></progress>
-                    </li>
-                </ul>
+            <div class="card2" id="card2">
+                <div id="actvt" class=" status">
+                    <nav>
+                        <span class="ststtl">Activity</span>
+                        <span class="stsnav">
+                            <div class="clricn"></div>
+                            <span class="clrnm">Earning</span>
+                            <div class="clricn"></div>
+                            <span class="clrnm">Spent</span>
+                        </span>
+                    </nav>
+                    <span class="stsimg">
+                        <img src="src/img/Activity.png" alt="no image">
+                    </span>
+                </div>
+                <div id="prgrs" class="status">
+                    <span class="ststtl">Payment</span>
+                    <ul id="ctnr">
+                        <li>
+                            <img src="src/img/Account.png" class="prgrsicn"></img>
+                            <label for="acc">Account</label>
+                            <label for="acc">$3,241/$10,000</label>
+                            <progress id="acc" value="40" max="100"></progress>
+                        </li>
+                        <li>
+                            <img src="src/img/Software.png" class="prgrsicn"></img>
+                            <label for="sft">Software</label>
+                            <label for="sft">$241/$250</label>
+                            <progress id="sft" value="90" max="100"></progress>
+                        </li>
+                        <li>
+                            <img src="src/img/Rent House.png" class="prgrsicn"></img>
+                            <label for="rh">Rent Houserh</label>
+                            <label for="rh">$1,541/$52,000</label>
+                            <progress id="rh" value="20" max="100"></progress>
+                        </li>
+                        <li>
+                            <img src="src/img/Food.png" class="prgrsicn"></img>
+                            <label for="fd">Food</label>
+                            <label for="fd">$141/$1,000</label>
+                            <progress id="fd" value="30" max="100"></progress>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="ctnrs" id="ctnrs3">
@@ -165,7 +187,7 @@
                     <ul>
                         <li>
                             <span class="prfl">
-                                <img src="src/img/prfl.jpg" alt="">
+                                <img src="src/img/Photo.png" alt="">
                             </span>
                             <span>
                                 <label for="nm">Tranfers from</label>
@@ -177,7 +199,7 @@
                         </li>
                         <li>
                             <span class="prfl">
-                                <img src="src/img/prfl.jpg" alt="">
+                                <img src="src/img/Photo-1.png" alt="">
                             </span>
                             <span>
                                 <label for="nm">Tranfers to</label>
@@ -189,7 +211,7 @@
                         </li>
                         <li>
                             <span class="prfl">
-                                <img src="src/img/prfl.jpg" alt="">
+                                <img src="src/img/Photo-2.png" alt="">
                             </span>
                             <span>
                                 <label for="nm">Tranfers to</label>
@@ -201,7 +223,7 @@
                         </li>
                         <li>
                             <span class="prfl">
-                                <img src="src/img/prfl.jpg" alt="">
+                                <img src="src/img/Photo-3.png" alt="">
                             </span>
                             <span>
                                 <label for="nm">Tranfers to</label>
