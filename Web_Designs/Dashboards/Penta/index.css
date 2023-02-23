@@ -36,13 +36,13 @@ article{
 
 section {
     background-color: #1A1C22;
-    width: 18%;
+    width: 16%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* padding-right: 1rem; */
+    padding-right: 2rem;
 }
 
 #logo {
@@ -246,7 +246,7 @@ main {
     display: flex;
     flex-direction: column; 
     /* border: 1px solid white; */
-    width: 58%;
+    width: 60%;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
