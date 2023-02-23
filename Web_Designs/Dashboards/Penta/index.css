@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: medium;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
@@ -159,20 +158,22 @@ main {
     grid-row: 2/3;
     background-color: #282C35;
 
-    display: grid;
-    grid-template-columns: 2fr 30%;
-    grid-template-rows: 20% 2fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;   
 }
-
+main>div{
+    border: 1px solid white;
+}
 #ctnrs1 {
-    grid-column: 1/3;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 30px;
 }
 
 .cards {
@@ -204,25 +205,25 @@ main {
 .crdnm {
     padding-left: 30px;
     padding-right: 30px;
-    ;
-    display: inherit;
+    display: flex;
     flex-direction: column;
 }
 
 .crdprc {
     font-size: 27px;
 }
+/* ---------------------------- */
 
-
+#ctnrs{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 
 /* ---------------------------- */
 #ctnrs2 {
-    grid-column: 1/2;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .ststtl {
@@ -248,23 +249,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
+    padding: 15px;
 }
 
 #ovrviw>nav,
 #actvt>nav{
     width: 100%;
-    display: inherit;
+    display: flex;
     align-items: baseline;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* border: 1px solid white; */
 }
 
 #card2 {
     display: inherit;
-    gap: 20px;
 }
 
 .stsnav {
@@ -335,25 +333,41 @@ main {
     background-color: #20ef5b;
     height: 8px;
 }
+
+
 /* --------------------------------- */
 
-#ctnrs3 {
-    grid-column: 2/3;
 
+
+#ctnrs3 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .blk{
-    display: inherit;
+    display: flex;
     flex-direction: column;
+    padding: 15px;
 }
 .blk>span{
-    display: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10%;
 }
+.blkicn{
+    background-color: #282C35;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 #cdtcrd{
     display: inherit;
     flex-direction: column;
@@ -365,7 +379,78 @@ display: flex;
 flex-direction: column;
 background-color: #282C35;
 padding: 10px;
+align-items: baseline;
+justify-content: space-between;
+gap: 15px;
 }
-#cdtcrd>div{
+#crdbl{
     background-color: #3D4149;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 5%;
+}
+#crdbl>span{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+#crdbl span ~ span{
+    align-items: end;
+    justify-content: baseline;
+}
+#crdbl>span>label{
+    color: #73777e;
+    font-size: 7px;
+    padding-bottom: 3%;
+}
+/* ========================= */
+#blk2{
+    min-width: 35vh;
+    font-size: 15px;
+}
+#trns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#trns>ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+#trns>ul,.trnsli{
+    width: 100%;
+}
+.trnsli{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+}
+.prfl{
+    height: fit-content;
+    width: fit-content;
+}
+.prflnm{
+    display: flex;
+    align-items: baseline;
+    font-size: 12px;
+    flex-direction: column;
+    width: 70%;
+}
+.prflnm>label{
+    font-size: 10px;
+    color: #9E9E9E;
+}
+.trnsli>span>p{
+    font-size: 12px;
+    color: #20ef5b;
 }
