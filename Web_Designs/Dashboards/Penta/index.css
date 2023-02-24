@@ -172,6 +172,7 @@ header {
 
 
 main {
+    /* border: 1px solid white; */
     height: 90%;
     width: 100%;
     background-color: #282C35;
@@ -185,10 +186,11 @@ main {
     border: 1px solid white;
 } */
 #ctnrs1 {
+    border: 1px solid white;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 14%;
+    width: inherit;
+    height: 15%;
     align-items: end;
     justify-content: space-evenly;
     /* border: 1px solid white; */
@@ -234,15 +236,17 @@ main {
 /* ---------------------------- */
 
 #ctnrs{
+    border: 1px solid white;
     display: flex;
-    width: 100%;
-    height: 80%;
+    width: 90%;
+    height: 70%;
     align-items: center;
     justify-content: space-evenly;
 }
 
 /* ---------------------------- */
 #ctnrs2 {   
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column; 
     /* border: 1px solid white; */
@@ -274,7 +278,8 @@ main {
 }
 
 #ovrviw{
-    width:95%;
+    width:inherit;
+    height: 50%;
 }
 
 #ovrviw,
@@ -299,7 +304,9 @@ main {
 #card2 {
     display:flex;
     align-items: center;
-    width: 100%;
+    border: 1px solid white;
+    width: inherit;
+    height: 30%;
     justify-content: space-between;
     flex-direction: row;
 }
@@ -332,21 +339,22 @@ main {
 }
 
 #ctnr{
-    list-style: none;
+    border: 1px solid white;
+    width: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
-    padding: 5px;
-    gap: 15px;
     /* border: 1px solid white; */
 }
 
 #ctnr>li{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .payicn{
         background-color: #282C35;
@@ -363,7 +371,8 @@ main {
 .paystts{
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    padding-right: 15%;
+    width: 70%;
 }
 .paystts>span{
     display: flex;
@@ -378,13 +387,22 @@ main {
     font-size: 10px;
     display: inline;
 }
-.paystts>progress{
-    width: 28vh ;
-    background-color: #20ef5b;
-    height: 8px;
+/*  */
+#prgrsbr{
+    display: block;
+    position: relative;
+    height: 5px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #282C35;
+    /* border: 1px solid white; */
 }
 
-
+#prgrsbr>div{
+    height: inherit;
+    background-color: #1FCB4F;
+    width: 40%;
+}
 /* --------------------------------- */
 
 
