@@ -19,7 +19,6 @@
 
 <body>
     <section>
-
         <div id="logo">
             <img src="src/img/logo.png" alt="no img">
             <p>Penta</p>
@@ -27,31 +26,45 @@
         <nav>
             <ul>
                 <li class="opt">
-                    <img src="src/img/Dashboard.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Dashboard.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Dashboard</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Transactions.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Transactions.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Transactions</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Wallet.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Wallet.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Wallet</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Analytics.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Analytics.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Analytics</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Personal.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Personal.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Personal</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Message.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Message.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Message</p>
                 </li>
                 <li class="opt">
-                    <img src="src/img/Setting.png" class="opticn"></img src="src/img/">
+                    <div class="opticn">
+                        <img src="src/img/Setting.png"></img src="src/img/">
+                    </div>
                     <p class="optnm">Setting</p>
                 </li>
             </ul>
@@ -59,15 +72,17 @@
     </section>
     <article>
         <header>
-            <div class="ttl">Dashboard</div>
+            <div class="ttl"><p>Dashboard</p></div>
 
             <nav id="hdr">
                 <span id="srchbr">
                     <input type="text" placeholder="Search..." id="srch">
                     <img class="bi" src="src/img/search-normal.png"></img>
                 </span>
-                <img id="notify" class="bi" src="src/img/NotificationWithDot.png"></img>
-                <span class="prfl">
+                <span id="notify">
+                    <img  class="bi" src="src/img/NotificationWithDot.png"></img>
+                </span>
+                <span id="profl">
                     <img src="src/img/Photo-4.png" alt="no img">
                 </span>
             </nav>
@@ -106,17 +121,25 @@
             </div>
             <div id="ctnrs">
                 <div id="ctnrs2">
-                    <div id="ovrviw" class="card2 status">
+                    <div id="ovrviw" class="status">
                         <nav>
-                            <span class="ststtl">Overview</span>
+                            <span class="ststtl"><p>Overview</p></span>
                             <span class="stsnav">
-                                <div class="clricn G"></div>
-                                <span class="clrnm">Income</span>
-                                <div class="clricn Y"></div>
-                                <span class="clrnm">Expenses</span>
-                                <select>
-                                    <option value="">Monthly</option>
-                                </select>
+                                <span>
+                                    <span class="indi">
+                                        <div class="clricn G"></div>
+                                        <span class="clrnm">Income</span>
+                                    </span>
+                                    <span class="indi">
+                                        <div class="clricn Y"></div>
+                                        <span class="clrnm">Expenses</span>
+                                    </span>
+                                </span>
+                                <span id="drpdwn">
+                                    <select>
+                                        <option value="">Monthly</option>
+                                    </select>
+                                </span>
                             </span>
                         </nav>
                         <span class="stsimg">
