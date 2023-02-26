@@ -10,7 +10,7 @@ html{
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 
     min-height: 100%;
     background-color: #282C35;
@@ -100,6 +100,7 @@ body{
     flex-direction: column;
     flex-basis: fit-content;
     flex-grow: 1;
+    flex-shrink: 1;
 }
 
 #prgrsbr{
