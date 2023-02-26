@@ -285,6 +285,10 @@ main {
 }
 /* ---------------------------- */
 
+
+
+
+
 #ctnrs{
     /* border: 1px solid white; */
     display: flex;
@@ -293,8 +297,6 @@ main {
     align-items: center;
     justify-content: space-evenly;
 }
-
-/* ---------------------------- */
 #ctnrs2 {   
     display: flex;
     flex-direction: column; 
@@ -304,96 +306,125 @@ main {
     align-items: center;
     justify-content: space-between;
 }
+
 /* =========================================== */
 
-#ovrviw{
+
+#chartcard{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+
+    background-color: #1A1C22;
+    color: #9A9A9A;
+
+    padding: 1%;
+
+    height: fit-content;
+
+    flex-basis: fit-content;
+    /* flex-grow: 1; */
+    border-radius: 10px;
+}
+
+#cardnav{
+    display: inherit;       
+    flex-direction: row;
+    align-items: inherit;
     justify-content: space-between;
-    /* border: 1px solid white; */
-    width:100%;
-    height: 50%;
-}
-#ovrviw>nav{
-    height: 15%;
+
     width: 100%;
-    display: inherit;
-    align-items: inherit;
-    justify-content:center;
-}
-.ststtl {
-    display: inherit;
-    align-items: inherit;
-    justify-content: start;
-    font-size: 15px;
-    height: 100%;
-    /* border: 1px solid white; */
-    width: 40%;
-}.ststtl>p{
-    padding-left: 10%;
+    height: 20%;
+
+    padding-bottom:3%;
 }
 
-
-.stsnav{
+#cardtitl{
     display: inherit;
-    flex-direction:row ;
+    align-items: center;
+    justify-content: baseline;
+    
+    font-size: 18px;
+    color: white;
+    
+    padding-left: 2%;
+
+    flex-basis: fit-content;
+    flex-grow: 1;
+
+}
+
+#cardopt,#drpdwn>select{
+    font-size: 12px;
+}
+
+#cardopt{
+    display: inherit;
+    align-items: inherit;
+    justify-content: space-between;
     width: 60%;
     height: 100%;
+}
+
+#chartopt{
+    display: inherit;
     align-items: inherit;
     justify-content: end;
-}
-.stsnav>span{
-    display: inherit;
-    align-items: inherit;
-    justify-content: center;
     height: 100%;
-    width: 30%;
+    flex-basis: fit-content;
+    flex-grow: 1;
 }
 
-.indi{
-    display: inherit;
-    align-items: inherit;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-}
-
-.clrnm {
-    padding-left: 10%;
-    font-size: 10px;
-    color: #9E9E9E;
-}
-
-.clricn {
-    min-height: 6px;
-    min-width: 6px;
+#chartopt>span{
+    padding: 1.5%;
     border-radius: 50%;
 }
-.G{
+#chartopt>span:nth-child(1){
     background-color: #1FCB4F;
 }
-.Y{
+#chartopt>span:nth-child(3){
     background-color: #FFC01E;
 }
 
-.stsimg{
-    display: inherit;
-    align-items: inherit;
-    justify-content: start;
-    width: 100%;
-    height:85%;
-    padding-left: 10%;
-    /* border: 1px solid white; */
+#chartopt>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    padding-right: 3%;
+    padding-left: 2%;
+
+    flex-basis: fit-content;
 }
 
+#drpdwn{
+    width: 30%;
+    display: inherit;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2%;
+}
 
 #drpdwn>select{
+    border-radius: 5px;
+    padding: 4%;
     background-color: #1A1C22;
-    border-radius: 10px;
     color: #9A9A9A;
-    font-size: 10px;
-    padding-right: 10%;
+}
+
+#chart{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 80%;
+}
+#chart>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* for images */
 }
 
 

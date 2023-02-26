@@ -72,7 +72,9 @@
     </section>
     <article>
         <header>
-            <div class="ttl"><p>Dashboard</p></div>
+            <div class="ttl">
+                <p>Dashboard</p>
+            </div>
 
             <nav id="hdr">
                 <span id="srchbr">
@@ -80,7 +82,7 @@
                     <img class="bi" src="src/img/search-normal.png"></img>
                 </span>
                 <span id="notify">
-                    <img  class="bi" src="src/img/NotificationWithDot.png"></img>
+                    <img class="bi" src="src/img/NotificationWithDot.png"></img>
                 </span>
                 <span id="profl">
                     <img src="src/img/Photo-4.png" alt="no img">
@@ -121,45 +123,47 @@
             </div>
             <div id="ctnrs">
                 <div id="ctnrs2">
-                    <div id="ovrviw" class="status">
-                        <nav>
-                            <span class="ststtl"><p>Overview</p></span>
-                            <span class="stsnav">
-                                <span>
-                                    <span class="indi">
-                                        <div class="clricn G"></div>
-                                        <span class="clrnm">Income</span>
-                                    </span>
-                                    <span class="indi">
-                                        <div class="clricn Y"></div>
-                                        <span class="clrnm">Expenses</span>
-                                    </span>
-                                </span>
-                                <span id="drpdwn">
+                    <div id="chartcard">
+                        <nav id="cardnav">
+                            <span id="cardtitl">Overview</span>
+                            <span id="cardopt">
+                                <div id="chartopt">
+                                    <span></span>
+                                    <div>Income</div>
+                                    <span></span>
+                                    <div>Expenses</div>
+                                </div>
+                                <div id="drpdwn">
                                     <select>
                                         <option value="">Monthly</option>
                                     </select>
-                                </span>
+                                </div>
                             </span>
                         </nav>
-                        <span class="stsimg">
+                        <div id="chart">
                             <img src="src/img/Overview.png" alt="no image">
-                        </span>
+                        </div>
                     </div>
                     <div class="card2" id="card2">
-                        <div id="actvt" class=" status">
-                            <nav>
-                                <span class="ststtl">Activity</span>
-                                <span class="stsnav">
-                                    <div class="clricn G "></div>
-                                    <span class="clrnm">Earning</span>
-                                    <div class="clricn Y"></div>
-                                    <span class="clrnm">Spent</span>
+                        <div id="chartcard">
+                            <nav id="cardnav">
+                                <span id="cardtitl">Activity</span>
+                                <span id="cardopt">
+                                    <div id="chartopt">
+                                        <span></span>
+                                        <div>
+                                            <p>Earning</p>
+                                        </div>
+                                        <span></span>
+                                        <div>
+                                            <p>Spent</p>
+                                        </div>
+                                    </div>
                                 </span>
                             </nav>
-                            <span class="stsimg">
+                            <div id="chart">
                                 <img src="src/img/Activity.png" alt="no image">
-                            </span>
+                            </div>
                         </div>
                         <div id="prgrs" class="status">
                             <span class="ststtl">Payment</span>
