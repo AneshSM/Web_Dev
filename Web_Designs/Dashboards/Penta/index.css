@@ -933,11 +933,13 @@ header {
     #search-bar{
         width: 150px;
     }
+    #main-container{
+        overflow-y:visible ;
+    }
     #main-content{
         flex-flow: column;
         justify-content: baseline;
         align-items: baseline;
-        overflow-y:visible ;
     }
     #container-1{
         padding: 0%;
