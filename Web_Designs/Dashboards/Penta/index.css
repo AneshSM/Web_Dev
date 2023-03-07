@@ -25,7 +25,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;    
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.05em;
 }
@@ -98,9 +97,26 @@ a{
     position: absolute; */
 }
 
-#open{
-    display: none;
+#logo {
+    /* border: 1px solid white; */
+    height: 13%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
 }
+
+#logo>div:first-child{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    padding-left: 15%;
+}
+
 #close{
     /* padding-top: 23px; */
     height: 100%;
@@ -115,17 +131,6 @@ a{
     /* margin-top: -2.6rem; */
     /* margin-left: 1rem; */
     /* display: none;*/
-}
-#logo {
-    /* border: 1px solid white; */
-    height: 13%;
-    width: 100%;
-    display: flex;
-    align-items:center;
-    justify-content: baseline;
-    padding-left: 20%;
-    font-size: 2rem;
-    font-weight: 700;
 }
 
 
@@ -209,7 +214,7 @@ a.sid-bar-opt.active:after{
     align-items: baseline;
     padding: 0%;
     /* display: none; */
-}
+        }
 
 
 /*=================================== Header ================================================= */
@@ -227,7 +232,9 @@ header {
     align-self: flex-start;
     padding: 5px;
 }
-
+#open{
+    display: none;
+}
 #header-title {
     color: white;
     height: 100%;
@@ -416,23 +423,22 @@ header {
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
+    padding: 0%;
 }
 
 
 
 /*  */
 #container-1 {
-    align-self: flex-start;
     width: 100%;
-    flex: 0 0 fit-content;
-    height: 20%;
+    height: 13%;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-content: baseline;
-    padding: 10px;
-    padding-top: 20px;
+    align-content: end;    
     row-gap: 25px;
-    order: 1;
+    align-self: flex-start;
+    padding: 0%;
+    padding-top: 10px;
 }
 
 .wallet-cards {
@@ -472,12 +478,11 @@ header {
 /*  */
 #container-2 {
     order: 2;
-    flex: none;
     align-self: flex-end;
     justify-content: space-between;
+    height: 87%;
     width: 100%;
     flex-flow: row wrap;
-    flex: 1;
     row-gap: 10px;
     padding: 10px;
     padding-bottom: 10px;
@@ -651,7 +656,6 @@ header {
 
 #prgrsbr {
     display: block;
-    position: relative;
     height: 5px;
     width: 100%;
     border-radius: 2px;
@@ -749,7 +753,7 @@ header {
 
 #credit-bal>span>label {
     font-size: 7px;
-    opacity: .5;
+    color: var(--color-lighter-font);
 }
 
 #transaction-card {
@@ -924,6 +928,9 @@ header {
 
 /* ++++++++++++++++++++++++ Media Query(Veiw Port) ++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 450px) {
+    body,#main-container{
+        overflow-x: hidden;
+    }
     #open{
         display: block;
     }
@@ -933,8 +940,8 @@ header {
     #search-bar{
         width: 150px;
     }
-    #main-container{
-        overflow-y:visible ;
+    #main-container,body,html{
+        overflow: scroll;
     }
     #main-content{
         flex-flow: column;
@@ -943,48 +950,59 @@ header {
     }
     #container-1{
         padding: 0%;
-        padding: 10px;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        row-gap: 10px;
-    }
-    #wallet-cards{
-        width: auto;
-    }
-    #container-2{
-        flex-grow: 1;
-        width: 100%;
-        flex-flow: column nowrap;
         padding: 5px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        row-gap: 10px;
+        column-gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 28%;
+    }
+    
+    #container-2{
+        flex-flow: column nowrap;
+        padding: 10px;
+        flex-grow: 1;
+        height: 72%;
+        gap: 5px;
     }
     #container-2-1{
-        height: fit-content;
         width: 100%;
-        justify-content: space-between;
-        gap: 10px;
+        padding: 0%;
     }
     #line-chart{
-        height: fit-content;
-    }
-    #bar-chart{
         width: 100%;
-    }
-    #progress-card{
-        width: 100%;
+        height: 35%;
     }
     #container-2-1-1{
-        flex-flow: column nowrap;
-        width: 100%;
-        height: fit-content;
+        flex-direction: column;
+        height: 65%;
         gap: 10px;
+        align-items: center;
+    }
+    #bar-chart{
+        height: 50%;
+        width:70%;
+    }
+    #progress-card{
+        height: 50%;    
+        width: 100%;
+    }
+    .prgrsicn{
+        padding: 4px;
+    }
+    .prgrsicn>span{
+        font-size: 18px;
     }
     #container-2-2{
-        justify-content: flex-start;
+        padding: 5%;
         width: 100%;
-        height: fit-content;
-        gap: 10px;
-        flex-flow: row wrap;
     }
+    #credit-card{
+        width: fit-content;
+    }
+   
 }
 @media screen and (max-width: 380px) {
 
