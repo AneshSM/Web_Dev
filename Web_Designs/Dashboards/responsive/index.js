@@ -7,19 +7,16 @@ const color={
 
 function menu(status) {
     const side_bar = document.getElementById('side_bar');
-    const main = document.getElementById('main_container');
     const open_menu = document.getElementById('open_menu');
     const close_menu = document.getElementById('close_menu');
 
 
     if (status === "close_menu") {
         side_bar.style.display = "none";
-        main.style.width = "100%";
         open_menu.style.display = "flex";
     }
     if (status === "open_menu") {
         side_bar.style.display = "flex";
-        main.style.width = "85%";
         open_menu.style.display="none"
         close_menu.style.display = "flex";
     }
@@ -36,7 +33,7 @@ function navigate(title="Dashboard"){
         element.classList.remove('active')
     });
     opt.classList.add('active');
-    if( (window.innerWidth || document.documentElement.clientWidth) <430) {
+    if( (window.innerWidth || document.documentElement.clientWidth) <1025) {
         menu("close_menu");
     }
     show_card.forEach(element=>{
@@ -45,4 +42,18 @@ function navigate(title="Dashboard"){
     });
     const card=document.getElementById(title+"_card");
     card.style.display="flex";
+}
+
+function show_container(name){
+    const container_name=document.getElementById(name);
+    var status={
+        value:0,
+    };
+    if(status.value==1){
+        container_name.style.display='none';
+
+    }else{
+        container_name.style.display='flex';
+        status.value=1
+    }
 }
