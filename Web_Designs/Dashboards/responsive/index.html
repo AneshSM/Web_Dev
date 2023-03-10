@@ -24,70 +24,72 @@
 </head>
 
 <body>
+    <div id="shaded_background"></div>
     <aside id="side_bar">
         <div id="bar_head">
-            <div id="logo">
-                <img src="src/img/logo.png" alt="no img">
-                <div id="bar_title">Penta</div>
-            </div>
-            <div id="close_menu" onclick="menu('close_menu')">
-                <span class="material-symbols-outlined">
-                    close
-                </span>
-            </div>
+                <div id="open_menu" onclick="menu('open_menu')">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>  
+                <div id="logo">
+                    <img src="src/img/logo.png" alt="no img">
+                    <div id="bar_title">Penta</div>
+                </div>
+                <div id="close_menu" onclick="menu('close_menu')">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
         </div>
         <div id="bar_content">
             <a href="#" id="Dashboard" class="bar_options" onclick="navigate('Dashboard')">
                 <span class="material-symbols-outlined">
                     dashboard
                 </span>
-                <h3>Dashboard</h3>
+                <h3 class="side_bar_content">Dashboard</h3>
             </a>
             <a class="bar_options" id="Transaction" onclick="navigate('Transaction')" href="#">
                 <span class="material-symbols-outlined">
                     account_balance_wallet
                 </span>
-                <h3>Transactions</h3>
+                <h3 class="side_bar_content">Transactions</h3>
             </a>
             <a class="bar_options" id="Wallet" onclick="navigate('Wallet')" href="#">
                 <span class="material-symbols-outlined">
                     wallet
                 </span>
-                <h3>Wallet</h3>
+                <h3 class="side_bar_content">Wallet</h3>
             </a>
             <a class="bar_options" id="Analytics" onclick="navigate('Analytics')" href="#">
                 <span class="material-symbols-outlined">
                     monitoring
                 </span>
-                <h3>Analytics</h3>
+                <h3 class="side_bar_content">Analytics</h3>
             </a>
             <a class="bar_options" id="Personal" onclick="navigate('Personal')" href="#">
                 <span class="material-symbols-outlined">
                     person_filled
                 </span>
-                <h3>Personal</h3>
+                <h3 class="side_bar_content">Personal</h3>
             </a>
             <a class="bar_options" id="Message" onclick="navigate('Message')" href="#">
                 <span class="material-symbols-outlined">
                     mail
                 </span>
-                <h3>Message</h3>
+                <h3 class="side_bar_content">Message</h3>
             </a>
             <a class="bar_options" id="Setting" onclick="navigate('Setting')" href="#">
                 <span class="material-symbols-outlined">
                     settings
                 </span>
-                <h3>Setting</h3>
+                <h3 class="side_bar_content">Setting</h3>
             </a>
         </div>
     </aside>
     <section id="main_container">
-        <header id="header">
-            <div id="open_menu" onclick="menu('open_menu')">
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
-            </div>
+        <header id="header">    
+
             <div id="head_title">Dashboard</div>
             <div id="head_content">
                 <div id="search_bar">
@@ -96,12 +98,54 @@
                         search
                     </span>
                 </div>
-                <div id="notify" onclick="show_container('notification_list')">
+                <div id="notify">
                     <span id="notify_icon" class="material-symbols-outlined head_icon">
                         notifications
                     </span>
-                    <div id="notification_list">
-
+                    <div id="notification">
+                        <h4 id="notify_head">Notifications <p>clear all</p></h4>
+                        <div id="notification_list">
+                            <div class="notify_list_content">
+                                <p class="notify_content">hi</p>
+                                <div onclick="notify('close_notification')">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="notify_list_content">
+                                <p class="notify_content">hi</p>
+                                <div onclick="notify('close_notification')">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="notify_list_content">
+                                <p class="notify_content">hi</p>
+                                <div onclick="notify('close_notification')">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="notify_list_content">
+                                <p class="notify_content">hi</p>
+                                <div onclick="notify('close_notification')">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="notify_list_content">
+                                <p class="notify_content">hi</p>
+                                <div onclick="notify('close_notification')">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="profile">
@@ -110,6 +154,13 @@
             </div>
         </header>
         <main id="main_content">
+            <div id="loader_background">
+                <div class="loader" id="loader">
+                </div>
+                <div id="loader_text">
+                    Loading...
+                </div>
+            </div>
             <div class="show_card" id="Dashboard_card">
                 <div id="kpi_cards">
                     <div class="kpi_card" onclick="navigate('Wallet')" >
@@ -179,7 +230,6 @@
                                 </nav>
                                 <div class="card_content">
                                     <div class="chart">
-                                        <img src="src/img/Overview.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +254,6 @@
                                     </nav>
                                     <div class="card_content">
                                         <div class="chart" id="bar">
-                                            <img src="src/img/Activity.png" alt="no image">
                                         </div>
                                     </div>
                                 </div>
