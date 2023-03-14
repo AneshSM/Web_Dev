@@ -1,26 +1,40 @@
+const window_size = {
+    innerwidth: window.innerWidth,
+    innerhidth: window.innerHeight,
+    clientwidth: document.documentElement.clientWidth,
+    clientheight: document.documentElement.clientHeight,
+}
 const color = {
     color_60: "#1A1C22",
     color_30: "#282C35",
     color_10: "#1FCB4F",
     color_focus: "#FFC01E",
 }
-
+// side bar contents
 const side_bar_content = {
     side_bar: document.getElementById('side_bar'),
     open_menu: document.getElementById('open_menu'),
     close_menu: document.getElementById('close_menu'),
-    bar_head: document.getElementById('#bar_head'),
+    bar_head: document.getElementById(' bar_head'),
     logo: document.getElementById('logo'),
     content: document.getElementsByClassName('side_bar_content'),
+    icon: document.getElementsByClassName('side_bar_icon'),
+}
+//maain container
+const main_container={
+    header: document.getElementById('header'),
+    main_content: document.getElementById('main_content'), 
 }
 
-// side bar
 
+
+
+if((window_size.innerwidth || window_size.innerWidth)>768){
 menu();
-
+// side bar
 function menu(status = 'close_menu') {
     if (status === "close_menu") {
-        side_bar_content.side_bar.style.width = '50px';
+        side_bar_content.side_bar.style.width = '70px';
         setTimeout(() => {
             side_bar_content.open_menu.style.display = 'flex';
             side_bar_content.close_menu.style.display = 'none';
@@ -35,7 +49,7 @@ function menu(status = 'close_menu') {
 
     else if (status === "open_menu") {
         side_bar_content.open_menu.style.display = 'none';
-        side_bar_content.side_bar.style.width = '200px';
+        side_bar_content.side_bar.style.width = '250px';
         setTimeout(() => {
             side_bar_content.close_menu.style.display = 'flex';
             side_bar_content.logo.style.visibility = 'visible';
@@ -46,8 +60,8 @@ function menu(status = 'close_menu') {
             }
         }, 800);
     }
-
 }
+}   
 
 
 
@@ -58,26 +72,27 @@ function navigate(title = "Dashboard") {
     start_loader();
 
     setTimeout(() => {
+        stop_loader();
         const tab = {
             show_card: document.querySelectorAll('.show_card'),
             bar_list: document.querySelectorAll(".bar_options"),
             head_title: document.getElementById('head_title'),
             opt: document.getElementById(title),
             card: document.getElementById(title + "_card"),
+            opt_container: document.querySelector('bar_caontent_elements'),
         }
         head_title.innerHTML = title;
         tab.bar_list.forEach(element => {
             element.classList.remove('active')
         });
         tab.opt.classList.add('active');
-        if ((window.innerWidth || document.documentElement.clientWidth) < 1025) {
-            menu("close_menu");
-        }
+        // if ((window.innerWidth || document.documentElement.clientWidth) < 1025) {
+        //     menu("close_menu");
+        // }
         tab.show_card.forEach(element => {
             element.style.display = "none";
         });
         tab.card.style.display = "flex";
-        stop_loader();
     }, 1000);
 }
 
@@ -144,3 +159,30 @@ function close_container() {
 }
 
 outside_container.addEventListener('click', close_container);
+
+
+
+
+
+// Line chart
+
+// var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+// new Chart("lineChart", {
+//   type: "line",
+//   data: {
+//     labels: xValues,
+//     datasets: [{
+//       data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+//       borderColor: "#FFC01E",
+//       fill: false
+//     }, {
+//       data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+//       borderColor: "#1FCB4F",
+//       fill: false
+//     },]
+//   },
+//   options: {
+//     legend: {display: false}
+//   }
+// });
