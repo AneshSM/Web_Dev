@@ -16,8 +16,11 @@
     --space_10: 20px;
 
     /* Even card space */
-    --cards_space:15px;
+    --padding_var:15px;
     --cards_gap: 15px;
+
+    /* Icon Spaces */
+    --icon_gap:10px;
 
     /* radius */
     --border_radius_max: 10px;
@@ -82,7 +85,6 @@ img {
     height: 100%;
     background-color: var(--color_60);
 
-
     display: flex;
     align-items: start;
     justify-content: start;
@@ -126,7 +128,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space_60);
     cursor: pointer;
 }
 
@@ -148,13 +149,16 @@ img {
     align-items: center;
     justify-content: start;
     padding-top: var(--space_60);
-    gap: var(--cards_gap);
+    gap: var(--icon_gap);
 }
 
 .bar_caontent_elements{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    height: fit-content;
+    position: relative;
 }
 
 .bar_options {
@@ -162,14 +166,13 @@ img {
     height: fit-content;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
     color: var(--font_color_30);
     font-weight: 400;
     font-size: clamp(10px, 12px, 1rem);
     padding: var(--space_60);
     padding-right: 0;
-    padding-left: 10%;
 }
 
 .active {
@@ -178,11 +181,13 @@ img {
 
 .active::after {
     content: "";
-    height: 100%;
+    height:70%;
     width: 8px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-color: var(--color_focus);
+    position: absolute;
+    right: var(--position);
 }
 
 .bar_options:hover {
@@ -223,15 +228,12 @@ img {
 #header {
     width: 100%;
     height: 8vh;
-    /* position: sticky;
-    top: var(--position);
-    right: var(--position); */
     background-color: var(--color_60);
     display: flex;
     align-items: center;
     padding: 2%;
     position: sticky;
-    top: 0cm;
+    top: var(--position);
     z-index: 5;
 }
 
@@ -442,7 +444,7 @@ img {
     align-items: flex-end;
     justify-content: space-between;
     flex-flow: row wrap;
-    padding: var(--cards_space);
+    padding: var(--padding_var);
     padding-bottom: 0%;
     gap: var(--cards_gap);
 }
@@ -613,7 +615,7 @@ img {
     flex-flow: row nowrap;
     flex: 1 1 auto;
     color: var(--font_color_60);
-    padding: var(--cards_space);
+    padding: var(--padding_var);
     gap: var(--cards_gap);
 }
 
@@ -625,7 +627,7 @@ img {
     width: 70%;
     height: 100%;
     flex: 0 1 auto;
-    gap: var(--cards_space);
+    gap: var(--padding_var);
 }
 
 #container_1_1 {
@@ -1119,22 +1121,47 @@ body::-webkit-scrollbar,
 /* Laptop 1440L */
 
 @media screen and (max-width:1440px) {
-
-
+    :root{
+        --padding_var:20px;
+        --cards_gap:20px;
+    }
 }
 
-@media screen and (max-width:1024px) {
-
-    #kpi_card{}
-
+@media screen and (max-width:1090px) {
+    :root{
+        --padding_var:15px;
+    }
 }
 
 /* Tablet(768px) */
 
-@media screen and (max-width:880px) {
-    #side_bar{
-        display: none;
+@media screen and (max-width:1300px) {
+    #container{
+        flex-flow: column nowrap;
     }
+    #container_1,
+    #container_2,
+    #container_1_2_1,
+    #container_1_2_2{
+        width: 100%;
+        flex-flow: row nowrap;
+    }
+    #container_1_2,
+    #container_1_1{
+        flex-flow: column nowrap;
+        height: 100%;
+    }
+    #kpi_cards{
+        padding: 0;
+    }
+    #container_1_1{
+        gap: var(--cards_gap);
+    }
+    #container_1_2,
+    #container_2_1{
+        height: 100%;
+    }
+
 }
 
 
@@ -1143,6 +1170,9 @@ body::-webkit-scrollbar,
     body{
         flex-flow: column nowrap;
         flex-direction: column;
+    }
+    #side_bar{
+        display: none;
     }
     #main_container{
         height: 100%;
