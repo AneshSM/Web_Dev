@@ -30,21 +30,26 @@ const card_container = {
 }
 
 
+var wndWidth,wndHeight,clntWidth,clntHeight;
+window.onresize=window.onload=()=>{
+    wndWidth=this.innerWidth;
+    wndHeight=this.innerHeight;
+    clntWidth=this.document.clientWidth;
+    clntHeight=this.document.clntHeight;
+    responsive_Layout(wndWidth,clntWidth);
+}
 
-setInterval(() => {
-    check_windowSize();
-}, 200);
-
-function check_windowSize() {
-    if ((window.innerWidth || window.document.clientWidth) < 1001) {
+function responsive_Layout(wndWidth,clntWidth) {
+    if ((wndWidth || clntWidth) < 1001) {
+        console.log(1);
         container.card_dashboard.insertBefore(card_container.kpi_container, container.container);
         container.container.insertBefore(container.container_1_2, container.container_2);
     }
-    else if ((window.innerWidth || window.document.clientWidth) < 1301) {
+    else if ((wndWidth || clntWidth)  < 1301) {
         container.container_1.appendChild(container.container_1_2, container.container_1);
         container.container_1_1.insertBefore(card_container.kpi_container, card_container.line_chart);
     }
-    else if ((window.innerWidth || window.document.clientWidth) > 1300) {
+    else if ((wndWidth || clntWidth)  > 1300) {
         container.container_1.appendChild(container.container_1_2, container.container_1);
         container.card_dashboard.insertBefore(card_container.kpi_container, container.container);
     }
